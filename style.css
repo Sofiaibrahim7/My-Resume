@@ -1,0 +1,173 @@
+
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 150px;
+}
+
+/* Container for the resume */
+.resume-container {
+    display: flex;
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+/* Left Section Styling */
+.left-section {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 20px;
+    width: 35%;
+    text-align: center;
+    border-right: 5px solid #393ce6;
+    position: relative;
+}
+
+/* Profile Picture Styling (Circular Border) */
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    margin-top: 3.4%;
+    border-radius: 50%; /* Circle effect */
+    border: 5px solid #8439e6; /* Border around the profile picture */
+    object-fit: cover;
+    position: absolute;
+    top: 10px; /* Keeps the image at the top */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the image horizontally */
+}
+
+/* Content Box that holds all text inside the left-section */
+.content-box {
+    margin-top: 120px; /* Adds space below the profile picture */
+    padding: 20px;
+    border: 2px solid #8439e6;
+    border-radius: 8px;
+    width: 90%; /* Centers the content box */
+    margin-left: -4%;
+    text-align: left; /* Aligns the text to the left */
+}
+
+/* Section Header Styling */
+h3 {
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px 0;
+    color: black;
+    background-color: #7b39e6;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #5939e6;
+    text-align: left; /* Aligns header text to the left */
+}
+
+/* Styling for each section (e.g., Career Objective, Certifications, etc.) */
+section {
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: left; /* Ensures all section text is left aligned */
+}
+
+/* Text Styling for paragraphs */
+section p {
+    margin: 5px 0;
+    padding-left: 10px; /* Adds slight left padding to the text */
+}
+
+/* For extra padding inside the sections */
+#objective, #certification, #Rewards {
+    padding-left: 20px; /* Adds padding to the left of text content */
+}
+
+/* Right Section Styling */
+.right-section {
+    padding: 20px;
+    width: 65%;
+}
+
+/* Button Styling */
+button {
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 15px black;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #5339e6;
+}
+
+/* --- Responsive Styles --- */
+
+/* For screens 768px and below (Tablet and Mobile Landscape) */
+@media screen and (max-width: 768px) {
+    .resume-container {
+        flex-direction: column; /* Stack sections vertically */
+        width: 90%;
+        padding: 30px;
+    }
+
+    .left-section, .right-section {
+        width: 100%; /* Full width for both sections */
+        border-right: none; /* Remove right border in stacked layout */
+    }
+
+    /* Adjust Profile Picture Size */
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Content Box adjustments */
+    .content-box {
+        margin-top: 60px;
+        margin-left: 0;
+    }
+
+    h3 {
+        font-size: 16px; /* Make section headers slightly smaller */
+    }
+
+    button {
+        font-size: 16px; /* Make button font size smaller */
+    }
+}
+
+/* For screens 480px and below (Mobile Portrait) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 30px; /* Less padding on smaller screens */
+    }
+
+    .resume-container {
+        padding: 20px;
+    }
+
+    .left-section, .right-section {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: 100px; /* Reduce profile picture size */
+    }
+
+    h3 {
+        font-size: 14px; /* Even smaller font size for section headers */
+    }
+
+    button {
+        font-size: 14px; /* Smaller button text */
+    }
+
+    /* Adjust left and right section layout */
+    .resume-container {
+        width: 100%; /* Ensure full-width layout */
+    }
+}
